@@ -92,23 +92,12 @@ class App extends Component {
     });
   };
 
-  // handleChanges = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     smurf: {
-  //       ...this.state.smurf,
-  //       [e.target.name]: e.target.value
-  //     }
-  //   });
-  // };-not working
-
-  // below is the one that works
-  addSmurf = () => {
+  addSmurf = e => {
+    e.preventDefault();
     this.setState({
       name: "",
       age: "",
-      height: "",
-      id: ""
+      height: ""
     });
     this.props.addSmurf(this.state.smurf);
   };
