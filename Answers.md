@@ -10,7 +10,6 @@ ANSWER:
 2.  Describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 
 ANSWER:
-
 -actions are plain JS objects and payloads of info that send data from your app to your store. they are made from action creators.
 
 -reducers are responsible for updating the state. They take in an initial state and return a new state. Only they, not actions are responsible for changing the state

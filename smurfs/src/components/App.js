@@ -26,6 +26,8 @@ class App extends Component {
               {/* <Loader type="Grid" color="#fb553b" height={200} width={200} /> */}
               <p>LOADING...</p>
             </div>
+          ) : this.props.error ? (
+            <div />
           ) : (
             <div className="list-container">
               <h1 className="title">Welcome to Smurf Village!</h1>
@@ -94,17 +96,18 @@ class App extends Component {
 
   addSmurf = e => {
     e.preventDefault();
-    this.setState({
-      name: "",
-      age: "",
-      height: ""
-    });
     this.props.addSmurf(this.state.smurf);
+    this.setState({
+      smurf: {
+        name: "",
+        age: "",
+        height: ""
+      }
+    });
   };
 }
 
 const mapStateToProps = state => ({
-  ...state,
   smurfs: state.smurfsReducer.smurfs
 });
 
@@ -115,5 +118,3 @@ export default connect(
     addSmurf
   }
 )(App);
-
-// onClick={this.addSmurf}
