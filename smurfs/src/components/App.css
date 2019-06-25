@@ -1,28 +1,99 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.smurfs-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.list-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-image: url("../village.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.smurfs-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.smurfs-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-title {
-  font-size: 1.5em;
+.smurf-card {
+  width: 40%;
+  align-self: center;
+  height: 200px;
+  background-color: rgba(98, 205, 253, 0.8);
+  /* max-width: 450px;
+  min-width: 220px; */
+  margin: 50px 1%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.App-intro {
-  font-size: large;
+/* Styling for form */
+
+.smurf-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 65%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.login-input {
+  width: 50%;
+  height: 56px;
+  padding: 0px 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #62cdfd;
+  margin-top: 20px;
+  box-shadow: 0px 4px 20px 0px transparent;
+}
+
+.btn-login {
+  display: block;
+  padding: 10px 15px;
+  background-color: #62cdfd;
+  color: black;
+  border: 1px solid black;
+  margin: 20px auto;
+}
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #62cdfd;
+}
+
+.village-link {
+  text-decoration: underline;
+  color: black;
+  margin-top: 30px;
 }
